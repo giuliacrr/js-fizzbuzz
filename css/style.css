@@ -1,0 +1,45 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(8, 59, 76);
+}
+
+.container-boxes {
+  aspect-ratio: 1/1;
+  gap: 15px 15px
+}
+
+.number-box {
+  aspect-ratio: 1/1;
+  width: calc((100% / 7) - 15px);
+}
+
+.bg-FizzBuzz {
+  background-color: #f0466f;
+}
+.txt-color-FB {
+  color:#f0466f!important;
+}
+
+.bg-number {
+  background-color: #1389b2;
+}
+
+.bg-Buzz {
+  background-color: #ffd166;
+}
+.txt-color-Buzz {
+  color:#ffd166!important;
+}
+
+.bg-Fizz {
+  background-color: #0cd6a1;
+}
+.txt-color-Fizz {
+  color:#0cd6a1!important;
+}

@@ -18,28 +18,48 @@ Crea un container nel DOM , aggiungendo (attraverso la funzione `append()`) un e
 Applica stili differenti agli elementi aggiunti al DOM nel *BONUS 1*, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
  */
+const boxContainer = document.querySelector(".container-boxes");
+
+
+
+
 
 for (let i = 1; i <= 100; i++) {
+  let numberBox = document.createElement("div");// Virtual div
+
+  //Containers
+  boxContainer.append(numberBox);
+  numberBox.classList.add("number-box", "d-flex", "justify-content-center", "align-items-center", "rounded");
+
   // Multipli di 3 e 5
   if (i % 3 === 0) {
     if (i % 5 === 0) {
       console.log("FizzBuzz");
+      numberBox.classList.add("bg-FizzBuzz", "fw-bold");
+      numberBox.innerHTML += ("FizzBuzz");
     } else {
       console.log("Fizz");
+      numberBox.classList.add("bg-Fizz", "fw-bold");
+      numberBox.innerHTML += ("Fizz");
     }
+
     //Multipli di 5
   } else if (i % 5 === 0) {
     console.log("Buzz");
+    numberBox.classList.add("bg-Buzz", "fw-bold");
+    numberBox.innerHTML += ("Buzz");
+
+    //Resto dei numeri
   } else {
-    console.log(i);
+    numberBox.classList.add("bg-number", "fw-bold");
+    numberBox.innerHTML += i;
   }
+
 }
 
 
 
 
-/**(i % 5 === 0) {
-    console.log("Buzz"); */
 
-/**(i % 3 && i % 5 === 0) {
-console.log("FizzBuzz"); */
+
+
